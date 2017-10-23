@@ -26,7 +26,7 @@ Setup a local live-server
 ######################################################################################################
 Setup babel in VSCode for JSX, ES6, ES7 -> ES5 translation
 
-1. npm install -g babel-cli
+1. npm install -g babel-cli or yarn add global babel-cli
 
 2. create package.json file by "npm init"
 
@@ -37,4 +37,8 @@ if the first option own't add the
     "babel-preset-react": "^6.24.1"
 	
 	Dependencies int "package.json" file
+	
+you can reinstall all the dependencies by running "yarn install" (make sure you have the yarn.lock file)
+	
+4. run "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch" to start translation from source to target output
 
