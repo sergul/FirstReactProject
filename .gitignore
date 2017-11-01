@@ -52,5 +52,6 @@ bin/
 **/bin/
 obj/
 **/obj/
-/indecision-app/node_modules
-/indecision-app/public/scripts
+/*/node_modules
+/*/public/scripts
+/*/.vscode
