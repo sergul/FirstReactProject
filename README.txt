@@ -42,3 +42,9 @@ you can reinstall all the dependencies by running "yarn install" (make sure you 
 	
 4. run "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch" to start translation from source to target output
 
+######################################################################################################
+
+Setup the debugger
+
+Make sure you have "webRoot": "${workspaceRoot}/src" in launch.json file
+
