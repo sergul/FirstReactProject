@@ -33,7 +33,7 @@ class IndecisionApp extends Component {
   }
 
   deleteOptionsCallback = () => {
-    this.setState(() => ({options: []}));
+    this.setState(() => ({options: [], selectedOption: undefined}));
   }
 
   deleteOptionCallback = (option) => {
@@ -43,7 +43,7 @@ class IndecisionApp extends Component {
           return optionT !== option;
         }
       );
-      return {options: options};
+      return {options: options, selectedOption: undefined};
     });
   }
 
@@ -74,14 +74,15 @@ class IndecisionApp extends Component {
     const subtitle = 'Lets put our lifes into the hands of computer';
 
     return (
-      <div className="App">
+      <div>
         <Header subtitle={subtitle}/>
-        <Action hasOptions={this.state.options.length > 0} getOption={this.getOption}/>
-        <Options options={ this.state.options }
-        removeOptionsCallback={this.deleteOptionsCallback}
-        removeOption={this.deleteOptionCallback}/>
-        <AddOption onAddOptionClick={this.onAddOptionClick}/>
-
+        <div className="container">
+          <Action hasOptions={this.state.options.length > 0} getOption={this.getOption}/>
+          <Options options={ this.state.options }
+          removeOptionsCallback={this.deleteOptionsCallback}
+          removeOption={this.deleteOptionCallback}/>
+          <AddOption onAddOptionClick={this.onAddOptionClick}/>
+        </div>
         <OptionModal selectedOption={this.state.selectedOption}/>
       </div>
     );

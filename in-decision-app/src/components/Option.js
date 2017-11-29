@@ -9,7 +9,9 @@ const Option = (props) => {
     return (
       <div>
         <p key={props.data}>{ props.data }</p>
-        <button onClick={onRemove}>Remove</button>
+        <button
+          className="button--link"
+          onClick={onRemove}>Remove</button>
       </div>
     );
   }
