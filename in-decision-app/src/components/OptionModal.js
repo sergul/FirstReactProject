@@ -22,10 +22,12 @@ class OptionModal extends Component {
         <Modal
             isOpen={!!this.state.selectedOption}
             contentLabel="Selected Option"
-            onRequestClose={ this.onClose }>
-            <h3>Selected Option</h3>
-            { this.state.selectedOption && <p>{ this.state.selectedOption}</p> }
-            <button onClick={ this.onClose }>Okay</button>
+            onRequestClose={ this.onClose }
+            closeTimeoutMS={200}
+            className="modal">
+            <h3 className="modal__title">Selected Option</h3>
+            { this.state.selectedOption && <p classNam="modal__body">{ this.state.selectedOption}</p> }
+            <button className="button" onClick={ this.onClose }>Okay</button>
         </Modal>
         );
     }

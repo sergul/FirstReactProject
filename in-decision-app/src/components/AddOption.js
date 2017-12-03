@@ -22,10 +22,12 @@ class AddOption extends Component {
     render() {
       return (
         <div>
-          <form onSubmit={this.onFormSubmit}>
-            <input type="text" name="optionField"/>
+          <p className="add-option-error">{this.state.error}</p>
+          <form
+            className="add-option"
+            onSubmit={this.onFormSubmit}>
+            <input className="add-option__input" type="text" name="optionField"/>
             <button className="button">Add Option</button>
-            <p>{this.state.error}</p>
           </form>
         </div>
       );

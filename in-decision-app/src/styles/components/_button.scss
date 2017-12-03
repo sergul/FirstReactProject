@@ -13,6 +13,7 @@
 .button {
     background: $purple;
     border: none;
+    color: white;
     border-bottom: .3rem solid darken($purple, 10%);
     font-weight: 500;
     padding: $s-size;
@@ -24,6 +25,10 @@
     border: none;
     color: $off-white;
     padding: 0;
+}
+
+.button-link--hidden {
+    visibility: hidden;
 }
 
 .big-button:disabled,

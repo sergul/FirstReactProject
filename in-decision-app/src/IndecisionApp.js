@@ -78,10 +78,12 @@ class IndecisionApp extends Component {
         <Header subtitle={subtitle}/>
         <div className="container">
           <Action hasOptions={this.state.options.length > 0} getOption={this.getOption}/>
-          <Options options={ this.state.options }
-          removeOptionsCallback={this.deleteOptionsCallback}
-          removeOption={this.deleteOptionCallback}/>
-          <AddOption onAddOptionClick={this.onAddOptionClick}/>
+          <div className="widget">
+            <Options options={ this.state.options }
+            removeOptionsCallback={this.deleteOptionsCallback}
+            removeOption={this.deleteOptionCallback}/>
+            <AddOption onAddOptionClick={this.onAddOptionClick}/>
+          </div>
         </div>
         <OptionModal selectedOption={this.state.selectedOption}/>
       </div>

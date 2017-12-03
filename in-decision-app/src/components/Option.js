@@ -7,11 +7,22 @@ const Option = (props) => {
     }
   
     return (
-      <div>
-        <p key={props.data}>{ props.data }</p>
-        <button
-          className="button--link"
-          onClick={onRemove}>Remove</button>
+      <div className="option">
+        <div className="option__row">
+          <p className="option__text">{ props.index }.{ props.data }</p>
+          <button
+            className="button--link"
+            onClick={onRemove}>Remove
+          </button>
+        </div>
+        <div className="option__row">
+          { 
+            <button
+              className="button--link button-link--hidden"
+              onClick={onRemove}>Read More
+            </button>
+          }
+        </div>
       </div>
     );
   }

@@ -1,0 +1,20 @@
+.option {
+    border-bottom: 1px solid lighten($light-blue, 10%);
+    padding: $l-size $l-size;
+}
+
+.option__text {
+    color: white;
+    font-weight: 650;
+    font-size: 2rem;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 45rem;
+}
+
+.option__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
