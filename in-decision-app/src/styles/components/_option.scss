@@ -3,18 +3,29 @@
     padding: $l-size $l-size;
 }
 
-.option__text {
-    color: white;
-    font-weight: 650;
-    font-size: 2rem;
-    margin: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 45rem;
-}
-
 .option__row {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     margin: 0;
+}
+
+.option__text {
+    color: white;
+    font-weight: $l-size * .8;
+    font-size: $s-size * 2;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: $m-size;
+}
+
+.option__text--hide-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.option__text--show-overflow {
+    word-break: break-all;
+    white-space: normal;
 }

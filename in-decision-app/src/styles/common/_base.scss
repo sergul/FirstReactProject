@@ -15,3 +15,11 @@ button {
 button:disabled {
     cursor: default;
 }
+
+.nowrap-white-space {
+    white-space: nowrap;
+}
+
+.small-font-size {
+    font-size: $s-size;
+}

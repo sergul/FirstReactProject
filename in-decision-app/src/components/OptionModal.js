@@ -26,7 +26,7 @@ class OptionModal extends Component {
             closeTimeoutMS={200}
             className="modal">
             <h3 className="modal__title">Selected Option</h3>
-            { this.state.selectedOption && <p classNam="modal__body">{ this.state.selectedOption}</p> }
+            { this.state.selectedOption && <p className="modal__body">{ this.state.selectedOption}</p> }
             <button className="button" onClick={ this.onClose }>Okay</button>
         </Modal>
         );

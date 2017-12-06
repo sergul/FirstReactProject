@@ -4,7 +4,7 @@
     outline-style: none;
     border-bottom: .6rem solid darken($purple, 10%);
     color: white;
-    font-size: $l-size;
+    font-size: $l-size * .8;
     padding: 2.4rem;
     margin-bottom: $xl-size;
     width: 100%;
@@ -28,7 +28,11 @@
 }
 
 .button-link--hidden {
-    visibility: hidden;
+    display: none;
+}
+
+.button-link--show {
+    display: inline-block;
 }
 
 .big-button:disabled,
@@ -36,4 +40,10 @@
 .button:disabled
 {
     opacity: .5;
+}
+
+@media (min-width: $desktop-breakpoint) {
+    .big-button {
+        font-size: $l-size;
+    }
 }

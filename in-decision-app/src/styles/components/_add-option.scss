@@ -1,6 +1,7 @@
 .add-option {
     display: flex;
     padding: $m-size;
+    flex-direction: column;
 }
 
 .add-option__input {
@@ -13,6 +14,7 @@
     color: $off-white;
     padding: $s-size;
     font-size: $m-size;
+    margin: 0 0 $s-size 0;
 }
 
 .add-option-error {
@@ -20,4 +22,14 @@
     font-style: italic;
     margin: $m-size 0 0 0;
     padding: 0 $m-size;
+}
+
+@media (min-width: 45rem) {
+    .add-option {
+        flex-direction: row;
+    }
+
+    .add-option__input {
+        margin: 0 $s-size 0 0;
+    }
 }
