@@ -1,2 +1,2 @@
-rd /s /q "custom-react-app-boilerplate\node_modules\"
-xcopy /s /i "custom-react-app-boilerplate" "new-custom-react-app-copy"
+rd /s /q "react-js-boilerplates\custom-react-boilerplate-app\node_modules\"
+xcopy /s /i "react-js-boilerplates\custom-react-boilerplate-app" "new-custom-react-app-copy"
