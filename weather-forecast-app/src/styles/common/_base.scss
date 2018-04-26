@@ -1,0 +1,56 @@
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family:  Open sans, Arial, sans-serif;
+    font-size: $m-size;
+    height: 100%;
+}
+
+body {
+    background: -webkit-linear-gradient(top left, $ultra-light-blue, $light-blue, $dark-blue); /*Safari 5.1-6*/
+    background: -o-linear-gradient(top left, $ultra-light-blue,$light-blue, $dark-blue); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(top left, $ultra-light-blue,$light-blue, $dark-blue); /*Fx 3.6-15*/
+    background: linear-gradient(top left, $ultra-light-blue,$light-blue, $dark-blue); /*Standard*/
+}
+
+.float-right { float: right; }
+
+.float-left { float: left; }
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+.nowrap-white-space {
+    white-space: nowrap;
+}
+
+.small-font-size {
+    font-size: $s-size;
+}
+
+.arrange-vertically > * {
+    display: block;
+    border: 1px solid blue;
+}
+
+.arrange-horizontally > * {
+    display: inline-block;
+    text-align: center;
+    border: 1px solid green;
+}
+
+.center-horizontally-parent {
+    text-align: center;
+}
+
+.center-horizontally-child {
+    display: inline-block;
+}

@@ -15,7 +15,7 @@ class Option extends Component {
 
   onReadMoreclick = (event) => {
     event.preventDefault();
-    this.setState({isOptionTextExpanded: true, isOptionTextExpanded: !this.state.isOptionTextExpanded});
+    this.setState({isOptionTextExpanded: !this.state.isOptionTextExpanded});
   }
 
   componentDidMount() {

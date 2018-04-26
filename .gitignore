@@ -55,3 +55,4 @@ obj/
 /*/node_modules
 /*/public/scripts
 /*/.vscode
+**/bundle.js

@@ -1,0 +1,7 @@
+.next-five-days-container { background: white; padding: 5px 10px; overflow: hidden; }
+.day-item { float: left; width: 20%; position: relative; }
+.day-item div { line-height: $s-size * 1.8; }
+.vseparator { width: 1px; background: #ccc; height: 100%; position: absolute; top: 0; right: 0; }
+.max-temp { font-size: $m-size }
+.min-temp { font-size: $s-size }
+.weather-icon { width: 50%; }
