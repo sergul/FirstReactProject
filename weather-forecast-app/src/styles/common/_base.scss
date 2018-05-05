@@ -10,10 +10,10 @@ body {
 }
 
 body {
-    background: -webkit-linear-gradient(top left, $ultra-light-blue, $light-blue, $dark-blue); /*Safari 5.1-6*/
-    background: -o-linear-gradient(top left, $ultra-light-blue,$light-blue, $dark-blue); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(top left, $ultra-light-blue,$light-blue, $dark-blue); /*Fx 3.6-15*/
-    background: linear-gradient(top left, $ultra-light-blue,$light-blue, $dark-blue); /*Standard*/
+    background: #367cd6;
+    background: -moz-linear-gradient(top, $light-blue 0%, $dark-blue 100%); 
+    background: -webkit-linear-gradient(top, $light-blue 0%, $dark-blue 100%); 
+    background: linear-gradient(to bottom, light-blue 0%,$dark-blue 100%);
 }
 
 .float-right { float: right; }

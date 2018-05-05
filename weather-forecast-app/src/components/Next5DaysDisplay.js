@@ -1,6 +1,11 @@
 import React from 'react';
 import { Next5DaysDisplayItem } from './index';
 
+/**
+ * Represents the UI for Next 5 days weather list
+ * 
+ */
+
 const Next5DaysDisplay = ({ list }) => {
     return (
         <div className="next-five-days-container">

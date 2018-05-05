@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Represents today's weather UI
+ */
+
 const TodaysDisplay = ({ date, maxTemp, minTemp, weather, humidity, icon }) => {
     return (
         <div className="cuurent-weather-container">

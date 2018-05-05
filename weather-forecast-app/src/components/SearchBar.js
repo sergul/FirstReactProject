@@ -1,6 +1,10 @@
 import React from 'react';
 import '../../node_modules/font-awesome/css/font-awesome.min.css';
 
+/**
+ * Represents the UI for typing and searching weather data of a desired city
+ */
+
 const SearchBar = (props) => {
 
     const onChangeHandler = (e) => {
