@@ -1,0 +1,60 @@
+header {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero-text-box {
+    text-align: center;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: $s-size $l-size;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: $m-size;
+    color: white;
+    border: 1px solid $orange;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-right: $m-size;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: $orange;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: $orange;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: $orange-dark;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid $orange-dark;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid $orange-dark;
+    color: white;
+}
+
+.logo {
+    width: 8rem;
+    height: 8rem;
+    margin: $margin;
+}

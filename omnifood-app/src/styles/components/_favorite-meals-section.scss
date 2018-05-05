@@ -1,0 +1,29 @@
+.section-meals {
+    width: 100%;
+    font-size: 1px;
+}
+
+@media screen and (max-width: 500px) {
+    .section-meals img {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .section-meals img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 762px) {
+    .section-meals img {
+        width: 50%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 992px) {
+    .section-meals img {
+        width: 25%;
+    }
+}
