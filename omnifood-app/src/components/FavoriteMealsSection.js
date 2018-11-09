@@ -1,23 +1,19 @@
 import React from "react";
-import image from '../img/1.jpg';
+import { FavoriteMealsItem } from "./index";
+import getImage from '../img/index';
 
 const FavoriteMealsSection = () => {
-    var imgSrc = '../img/1.jpg';
-    return (
-        <section className="section-meals section-gap">
-            <div>
-                <img src={imgSrc}/>
-                <img src={image}/>
-                <img src={image}/>
-                <img src={image}/>
-                <img src={image}/>
-                <img src={image}/>
-                <img src={image}/>
-                <img src={image}/>
-            </div>
-            
-        </section>
-        );
+    let jsx = [];
+    const createItems = (numItems) => {
+        let index = 1;
+        for (let i = 1; i < numItems; ++i) {
+            index = i.toString();
+            jsx.push(<FavoriteMealsItem key={index} img={getImage(`${index}.jpg`)} />);
+        }
+        return jsx;
+    }
+    
+    return <section className="favorite__meals section-gap">{createItems(9)}</section>;
 };
 
 export { FavoriteMealsSection };

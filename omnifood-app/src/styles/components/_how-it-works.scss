@@ -1,0 +1,43 @@
+.how-it-works__device-image {
+    width: 30%;
+    height: auto;
+}
+
+.how-it-works__list-item {
+    display: table;
+    margin-top: $margin;
+}
+
+.how-it-works__list-item-number {
+    width: 6rem;
+    line-height: 6rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: $l-size * .7;
+    border: 2px solid #666;
+    display: inline-block;
+    color: $orange;
+}
+
+.how-it-works__list-item-p {
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+.vertical-center {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.btn-app {
+    border-style: none;
+}
+
+.btn-app img {
+    width: 25%;
+    height: auto;
+}
+
+.btn-app-section {
+    margin-top: $margin-section;
+}

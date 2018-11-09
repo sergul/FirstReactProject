@@ -12,6 +12,7 @@ const Header = () => {
         <img src={logo} alt="Omnifood logo" className="logo"/>
         <NavBar navBarClass="nav-bar">
           <a href="#">Food delivery</a>
+          
           <a href="#">How it works</a>
           <a href="#">Our cities</a>
           <a href="#">Sign up</a>

@@ -4,3 +4,6 @@ export * from './NavBar';
 export * from './FeaturesSection';
 export * from './FeaturesSectionItem';
 export * from './FavoriteMealsSection';
+export * from './FavoriteMealsItem';
+export * from './HowItWorksSection';
+export * from './HowItWorksItem';

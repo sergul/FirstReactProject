@@ -1,29 +1,32 @@
-.section-meals {
+.favorite__meals {
     width: 100%;
     font-size: 1px;
 }
 
+.favorite__meals-item {
+    display: inline-block;
+    width: 25%;
+    overflow: hidden;
+}
+
+.favorite__meals-item img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    filter: brightness(70%);
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.favorite__meals-item
+img:hover {
+    transform: scale(1);
+    filter: brightness(100%);
+}
+
+@media screen and (max-width: 768px) {
+    .favorite__meals-item { width: 50%; }
+}
+
 @media screen and (max-width: 500px) {
-    .section-meals img {
-        width: 100%;
-    }
-}
-
-@media screen and (min-width: 500px) {
-    .section-meals img {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 762px) {
-    .section-meals img {
-        width: 50%;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 992px) {
-    .section-meals img {
-        width: 25%;
-    }
+    .favorite__meals-item { width: 100%; }
 }

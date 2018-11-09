@@ -7,15 +7,15 @@ const FeaturesSection = props => {
     return (
         <section>
             <Row className="features-section-header-row" align="center">
-            <Col align="center" md={12}>
-                <h2>Get food fast &mdash; not fast food</h2>
-                <p className="long-copy">
-                    Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking.
-                    So let us take care of that, we’re really good at it, we promise!
-                </p>
-            </Col>
-                
+                <Col align="center" md={12}>
+                    <h2>Get food fast &mdash; not fast food</h2>
+                    <p className="long-copy">
+                        Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking.
+                        So let us take care of that, we’re really good at it, we promise!
+                    </p>
+                </Col>
             </Row>
+
             <Row className="features-section-row">
                 <Col md={3} lg={3}>
                     <FeaturesSectionItem

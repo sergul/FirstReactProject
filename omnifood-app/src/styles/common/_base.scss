@@ -18,7 +18,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
 }
 
@@ -45,6 +45,10 @@ h2::after {
     content: "";
     width:15rem;
     margin-top: $l-size;
+}          
+
+p {
+    font-weight: 400;
 }
 
 .long-copy {
@@ -72,12 +76,4 @@ h2::after {
 
 .nowrap-white-space {
     white-space: nowrap;
-}
-
-.flex-grid {
-    display: flex;
-}
-
-.col {
-    flex: 1;
 }
