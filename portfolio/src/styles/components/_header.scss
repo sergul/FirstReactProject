@@ -1,19 +1,5 @@
 .header {
-    background: $off-black;
-    margin-bottom: $xl-size;
-    color: white;
-    padding: $m-size 0;
-}
-
-.header__title {
-    color: $off-orange;
-    font-size: $l-size;
-    margin: 0;
-}
-
-.header__subtitle {
-    color: $off-white;
-    font-size: $m-size;
-    font-weight: 500;
-    margin: 0;
+    background: $light-green;
+    height: 250px;
+    max-height: 300px;
 }
