@@ -1,5 +1,17 @@
-.header {
+.header-container {
     background: $light-green;
-    height: 250px;
-    max-height: 300px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.avatar {
+    min-width: 240px;
+    max-width: 15%;
+    border-radius: 50%;
+}
+
+.my-info-container {
+    display:inline-block;
+    vertical-align: top;
+    text-align: left;
 }

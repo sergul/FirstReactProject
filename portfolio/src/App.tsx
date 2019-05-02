@@ -9,13 +9,11 @@ import NotFoundPage from './components/NotFoundPage';
 const App: React.FC = () => {
   return (
     <Router>
-    <div>
-        <Header/>
-        <Switch>
-            <Route path="/" component={Main} exact={true}/>
-            <Route component={NotFoundPage}/>
-        </Switch>
-    </div>
+      <Header/>
+      <Switch>
+          <Route path="/" component={Main} exact={true}/>
+          <Route component={NotFoundPage}/>
+      </Switch>
     </Router>
   );
 }
