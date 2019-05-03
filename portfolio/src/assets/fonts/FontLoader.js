@@ -1,12 +1,14 @@
 import WebFont from 'webfontloader';
 
-export default () => {
+const loadFonts = () => {
     WebFont.load({
     google: {
-      families: ['Lato:100,300,300i,400', 'sans-serif']
+      families: ['Titillium Web:300,400,700', 'sans-serif']
     },
     active: function() {
         console.log('fonts are loaded!');
     },
   });
 }
+
+export default loadFonts;
