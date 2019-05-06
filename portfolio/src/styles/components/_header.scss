@@ -1,5 +1,5 @@
 .header-container {
-    background: $light-green;
+    background: $dark-green;
     text-align: center;
     padding: 20px 0 20px 0;
 }
@@ -8,12 +8,16 @@
     min-width: 240px;
     max-width: 15%;
     border-radius: 50%;
-    margin-right: 40px;
 }
 
 .header-info-container {
     display:inline-block;
+    margin-left: 20px;
     vertical-align: top;
     text-align: left;
     color: white;
+}
+
+.link-on-header, a.link-on-header {
+    color: $light-green;
 }

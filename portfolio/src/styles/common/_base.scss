@@ -3,24 +3,18 @@ html {
 }
 
 body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-size: $m-size;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0 !important;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    line-height: 1.6;
 }
 
 .nowrap-white-space {
@@ -33,4 +27,9 @@ time, mark, audio, video {
 
 .inline-block {
     display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent;
 }

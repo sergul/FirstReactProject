@@ -3,10 +3,11 @@ import WebFont from 'webfontloader';
 const loadFonts = () => {
     WebFont.load({
     google: {
-      families: ['Titillium Web:300,400,700', 'sans-serif']
+      families: ['Inconsolata Web:400']
     },
     active: function() {
-        console.log('fonts are loaded!');
+      sessionStorage.fonts = true;
+      console.log('fonts are loaded!');
     },
   });
 }
