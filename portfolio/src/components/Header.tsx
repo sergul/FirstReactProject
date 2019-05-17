@@ -13,10 +13,11 @@ class Header extends PureComponent {
           <div className="medium-font-size">Hi :) My name is:</div>
           <h2>Sergey Mikayelyan</h2>&nbsp;
           <div className="small-font-size">
-            I'm a front-end developer mainly specialized in UI development technologies for complex scalable web app development.<br/>
-            I also have experience in developing ASP.NET Core based middle-tier backend services. I worked as a front-end developer in<br/>
-            <a className="link-on-header" target="_blank" href="https://www.hcltech.com/">HCL America</a> and currently working as a Senior web/app developer in <a className="link-on-header" target="_blank" href="https://en.pactera.com/">Pactera Technologies</a><br/>
-            You can find more about my career journey in <Link className="link-on-header" to="/Resume">resume.</Link>
+            I'm a passionate Software Developer who've been intensively developing and delivering software products<br/>
+            and services more than 9 years. During this beautiful journey I've always put my first priority on giving <b>quality</b><br/>
+            and client satisfaction in work / end result.<br/>
+            Throughout my career path I've always sharpened my professional skills as I've been in Game, Desktop and Web development.<br/>
+            You can find more about my recent experience in my <Link className="link-on-header" to="/resume">resume.</Link>
           </div>
         </div>
       </div>

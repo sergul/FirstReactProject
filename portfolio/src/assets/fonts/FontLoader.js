@@ -3,7 +3,7 @@ import WebFont from 'webfontloader';
 const loadFonts = () => {
     WebFont.load({
     google: {
-      families: ['Inconsolata Web:400']
+      families: ['Inconsolata:400']
     },
     active: function() {
       sessionStorage.fonts = true;
