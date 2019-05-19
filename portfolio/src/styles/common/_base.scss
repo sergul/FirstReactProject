@@ -1,10 +1,9 @@
 html {
-    font-size: 62.5%;
+    //font-size: 62.5%;
 }
 
 body {
     font-family: 'Inconsolata', monospace;
-    font-size: $m-size;
 }
 
 *, *::before, *::after {
@@ -14,7 +13,6 @@ body {
 html, body, h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0 !important;
     margin-top: 0 !important;
-    line-height: 1.6;
 }
 
 .nowrap-white-space {
@@ -27,6 +25,22 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
 .medium-font-size {
     font-size: $m-size;
+}
+
+.large-font-size {
+    font-size: $l-size;
+}
+
+.padding-top-small {
+    padding-top: 10px;
+}
+
+.link-on-header, a.link-on-header {
+    color: $light-green;
+}
+
+.padding-top-normal {
+    padding-top: 20px;
 }
 
 .inline-block {

@@ -1,11 +1,10 @@
 .header-container {
     background: $dark-green;
     text-align: center;
-    padding: 20px 0 20px 0;
 }
 
 .avatar {
-    min-width: 240px;
+    min-width: 200px;
     max-width: 15%;
     border-radius: 50%;
 }
@@ -16,8 +15,5 @@
     vertical-align: top;
     text-align: left;
     color: white;
-}
-
-.link-on-header, a.link-on-header {
-    color: $light-green;
+    line-height: $line-height;
 }

@@ -1,0 +1,18 @@
+
+.nav-bar__container {
+  width: 100%;
+  background: $dark-green;
+}
+
+.nav-bar__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background: red;
+  position: absolute;
+  right: 0;
+}
+
+.nav-bar__list li {
+  display: inline-block;
+}
