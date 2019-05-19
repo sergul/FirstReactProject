@@ -1,18 +1,24 @@
 
 .nav-bar__container {
-  width: 100%;
-  background: $dark-green;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  background: $redish;
+  padding: 10px 20px 10px 20px;
 }
 
 .nav-bar__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background: red;
-  position: absolute;
-  right: 0;
 }
 
 .nav-bar__list li {
   display: inline-block;
+  margin-right: 20px;
+}
+
+.nav-bar__list li a {
+  color: white;
+  font-size: $s-size;
 }
