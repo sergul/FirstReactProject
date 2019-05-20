@@ -11,9 +11,9 @@ body {
     box-sizing: border-box;
 }
 
-html, body, h1, h2, h3, h4, h5, h6 {
+html, body, h1, h2, h3, h4, h5, h6, p {
 	margin-bottom: 0 !important;
-    margin-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .nowrap-white-space {
@@ -26,6 +26,15 @@ html, body, h1, h2, h3, h4, h5, h6 {
 
 .medium-font-size {
     font-size: $m-size;
+}
+
+.vertically-center {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .large-font-size {
