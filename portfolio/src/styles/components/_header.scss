@@ -1,19 +1,30 @@
 .header-container {
-    background: $green;
+ background: $green;
 }
 
-.header-avatar__container {
-    min-width: 250px;
-    width: 14%;
+.header-avatar-container {
+ min-width: 250px;
+ width: 14%;
+ line-height: 0;
+ margin-right: $margin-normal;
+ vertical-align: middle;
 }
 
 .header-avatar {
-    width: 100%;
-    border-radius: 50%;
+ width: 100%;
+ border-radius: 50%;
 }
 
 .header-bio-container {
-    text-align: left;
-    color: white;
-    line-height: $line-height;
+ text-align: left;
+ color: white;
+ line-height: $line-height;
+ vertical-align: middle;
+}
+
+.header-center-container {
+ padding-bottom: 20px;
+ padding-top: 20px;
+ text-align: center;
+ line-height: 0;
 }

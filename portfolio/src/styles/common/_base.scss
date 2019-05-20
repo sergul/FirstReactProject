@@ -1,63 +1,74 @@
 html {
-    height: 100%;
+ height: 100%;
 }
 
 body {
-    height: 100%;
-    font-family: 'Inconsolata', monospace;
+ height: 100%;
+ font-family: 'Inconsolata', monospace;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
 }
 
-html, body, h1, h2, h3, h4, h5, h6, p {
-	margin-bottom: 0 !important;
-  margin-top: 0 !important;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+ margin-bottom: 0 !important;
+ margin-top: 0 !important;
 }
 
 .nowrap-white-space {
-    white-space: nowrap;
+ white-space: nowrap;
 }
 
 .small-font-size {
-    font-size: $s-size;
+ font-size: $s-size;
 }
 
 .medium-font-size {
-    font-size: $m-size;
+ font-size: $m-size;
 }
 
 .vertically-center {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 .large-font-size {
-    font-size: $l-size;
+ font-size: $l-size;
 }
 
 .padding-top-small {
-    padding-top: 10px;
-}
-
-.link-on-header, a.link-on-header {
-    color: $light-green;
+ padding-top: 10px;
 }
 
 .padding-top-normal {
-    padding-top: 20px;
+ padding-top: 20px;
+}
+
+.link-on-header,
+a.link-on-header {
+ color: $light-green;
 }
 
 .inline-block {
-    display: inline-block;
+ display: inline-block;
 }
 
 a {
-    text-decoration: none;
-    background-color: transparent;
+ text-decoration: none;
+ background-color: transparent;
 }
