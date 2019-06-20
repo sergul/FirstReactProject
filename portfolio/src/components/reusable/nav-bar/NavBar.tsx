@@ -12,7 +12,7 @@ class NavBar extends PureComponent<any, any> {
 
   render() {
     return (
-      <nav className="nav-bar__container">
+      <nav id="mainNav" className="nav-bar__container">
         <ul className="nav-bar__list">
           {
             this.props.children
