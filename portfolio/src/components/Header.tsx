@@ -18,15 +18,17 @@ class Header extends PureComponent {
             <img className="header-avatar" alt="Me :)" src={getImage('avatar.jpg')}></img>
           </div>
           <div className="header-bio-container inline-block">
-            <p className="medium-font-size">Hi :) My name is:</p>
+            <div className="padding-bottom-small">
+              <p className="medium-font-size">Hi :) My name is:</p>
+            </div>
             <h2 className="large-font-size">Sergey Mikayelyan</h2>
             <p className="small-font-size padding-top-normal">
-              I'm a passionate Software Developer who've been intensively developing and delivering<br />
-              software products and services more than 9 years. During this beautiful journey I've<br />
-              always put my first priority on giving <b>quality</b> and client satisfaction in work / end result.<br />
-              Throughout my career path I've always sharpened my professional skills as I've been<br />
-              in Game, Desktop and Web development. You can find more about experience in my <Link className="link-on-header" to="/resume">resume</Link> :)
-                </p>
+              I'm a passionate software developer specialized in frontend and backend web/app development.<br />
+              Throughout my long career journey I've always put the <label className="bold-text">work quality</label> on first place.<br />
+              Because quality brings trust. To gain the best quality I used to always sharpen my professional skills.<br />
+              Check out my portfolio and <Link className="link-on-header" to="/resume">resume</Link> if you want to know how I might help to push your business forward.
+              
+            </p>
           </div>
 
         </div>

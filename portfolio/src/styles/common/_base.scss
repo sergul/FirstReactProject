@@ -59,13 +59,26 @@ p {
  padding-top: 20px;
 }
 
+.padding-bottom-small {
+ padding-bottom: 10px;
+}
+
+.padding-bottom-normal {
+ padding-bottom: 20px;
+}
+
+
 .link-on-header,
 a.link-on-header {
- color: $light-green;
+ color: $light-blue;
 }
 
 .inline-block {
  display: inline-block;
+}
+
+.bold-text {
+ font-weight: 600;
 }
 
 a {
