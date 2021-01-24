@@ -1,0 +1,66 @@
+{
+  "env": { "es6": true },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "simple-import-sort", "import"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off", // We have too many complex types to require this
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/interface-name-prefix": "off", // Sometimes our interfaces are named IFoo on purpose.
+    "react-hooks/exhaustive-deps": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/prop-types": "off", // We have Typescript for this
+    "react/react-in-jsx-scope": "error",
+    "simple-import-sort/imports": "error",
+    "no-console": "warn",
+    "quotes": ["error", "double"],
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/order": "off",
+    "sort-imports": "off",
+    "indent": ["error", 2],
+    "max-len": ["error", { "code": 140, "ignoreComments": true }],
+    "no-fallthrough": "error",
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": { "multiline": true },
+        "ObjectPattern": { "multiline": true },
+        "ImportDeclaration": { "multiline": true },
+        "ExportDeclaration": { "multiline": true }
+      }
+    ],
+    "react/jsx-closing-bracket-location": [1, "after-props"],
+    "arrow-parens": ["error", "always"],
+    "key-spacing": ["error", { "afterColon": true }],
+    "space-infix-ops": "error",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": ["block", "block-like", "cjs-export", "class", "export", "let"],
+        "next": "*"
+      }
+    ],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 1, "when": "multiline" }],
+    "linebreak-style": 0,
+    "global-require": 0,
+    "eslint linebreak-style": [0, "error", "windows"],
+    "eol-last": ["error", "always"]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
