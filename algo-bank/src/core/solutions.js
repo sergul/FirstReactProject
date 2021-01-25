@@ -26,6 +26,28 @@ export const solutions = {
     }
     
     return candies;
+  }.toString()),
+
+  maximumWealth: deleteIndent(function(accounts) {
+    let maxWealth = 0;
+  
+    accounts.forEach((customer) => {
+      const customerWealth = customer.reduce((sum, wealth) => sum + wealth);
+      if (maxWealth < customerWealth) {
+        maxWealth = customerWealth;
+      }
+    });
+    
+    return maxWealth;
+  }.toString()),
+
+  shuffle: deleteIndent(function(nums, n) {
+    const shuffled = [];
+    for (let i = 0; i < n ; ++i) {
+      shuffled.push(nums[i], nums[n + i]);
+    }
+
+    return shuffled;
   }.toString())
 };
 
