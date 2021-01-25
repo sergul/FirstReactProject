@@ -21,10 +21,17 @@ export const Solution = (props: OwnProps) => {
   
   return (
     <>
-      <SyntaxHighlighter customStyle={{ margin: "6px 24px 0 6px" }} language="javascript" style={a11yDark} wrapLongLines>
+      <SyntaxHighlighter
+        customStyle={{
+          margin: "10px 0 -4px 0",
+          overflowX: "hidden", maxHeight: 400, maxWidth: 600, minWidth: 300, display: "inline-block" 
+        }}
+        language="javascript"
+        style={a11yDark}
+        wrapLongLines>
         {`${solution.name} = ${solution.body};`}
       </SyntaxHighlighter>
-      <Button variant="outlined" onClick={() => setShowExplanation(!showExplanation)}>Show Solution</Button>
+      <Button variant="outlined" style={{ display: "block" }} onClick={() => setShowExplanation(!showExplanation)}>Show Explanation</Button>
       {showExplanation && <Explanation text={solution.explanation}/>}
     </>
   );

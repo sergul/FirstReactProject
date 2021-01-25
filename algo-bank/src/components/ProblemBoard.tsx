@@ -13,7 +13,7 @@ export const ProblemBoard = () => {
   const minWidth = 300;
   const problems = useMemo(() => getProblems(), []);
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 16 }}>
       <Grid container spacing={3}>
         {problems.leetcode.map(({ id,  name, url, difficulty, tags, solution }) => {
           return (

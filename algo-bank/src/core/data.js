@@ -16,9 +16,9 @@ export const getProblems = () => {
           body: solutions.runningSum.toString(),
           explanation: `/*
           Input: nums = [1,2,3,4]
+          runningSum(nums);
           Expected: [1,3,6,10]
-          Explanation: Below is the core idea of this solution step by step.
-          SPE = Sum of Previous Elements
+          Explanation: Below steps show how the solution code works:
           i0. 1 + SPE -> 0 === 1
           i1. 2 + SPE -> 1 === 3
           i2. 3 + SPE -> 3 === 6

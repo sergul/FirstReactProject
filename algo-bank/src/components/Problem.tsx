@@ -37,8 +37,6 @@ export const Problem = (props: OwnProps) => {
     setOpen(false);
   };
 
-  
-
   return (
     <ClickAwayListener onClickAway={onClickAway}>
       <div className="roboto" style={{ background: "lightBlue", padding: 10 }}>
@@ -54,6 +52,7 @@ export const Problem = (props: OwnProps) => {
             placement="bottom"
             open={isOpen}
             anchorEl={anchorEl}
+            style={{ padding: "0 16px 0 16px" }}
             modifiers={{
               flip: { enabled: true },
               arrow: { enabled: true }
