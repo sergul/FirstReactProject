@@ -1,4 +1,5 @@
 import { Grid } from "@material-ui/core";
+import axios, { AxiosError, AxiosResponse } from "axios";
 import React, { useMemo } from "react";
 
 import { getProblems } from "../core/data";
@@ -12,8 +13,20 @@ export const ProblemBoard = () => {
   const maxWidth = 400;
   const minWidth = 300;
   const problems = useMemo(() => getProblems(), []);
+
+  const onTestAPI = () => {
+    axios.get("/api/problems")
+      .then((response: AxiosResponse) => {
+        console.log(response.data);
+      })
+      .catch((error: AxiosError) => {
+        console.log(error.response?.statusText, error.response?.status);
+      });
+  };
+
   return (
     <div style={{ padding: 16 }}>
+      <button onClick={onTestAPI}>Test api</button>
       <Grid container spacing={3}>
         {problems.leetcode.map(({ id,  name, url, difficulty, tags, solution }) => {
           return (
