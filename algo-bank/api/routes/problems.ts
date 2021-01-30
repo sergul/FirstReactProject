@@ -1,9 +1,10 @@
 import express from "express";
 var router = express.Router();
+import { getProblems } from "../src/core/data/data";
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+/* GET problems */
+router.get('/', function (req, res, next) {
+  res.json(JSON.stringify(getProblems()));
 });
 
 module.exports = router;

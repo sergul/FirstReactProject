@@ -1,14 +1,19 @@
 import { Button, ClickAwayListener, Link, Popper } from "@material-ui/core";
 import React, { MouseEvent, useState } from "react";
 
-import { ProblemSolution,Solution } from "./Solution";
+import { ProblemSolution, Solution } from "./Solution";
 
-interface OwnProps {
+export interface ProblemList {
+  leetcode: Problem[];
+}
+
+export interface Problem {
+  id: string;
   name: string;
-  href: string;
-  solution: ProblemSolution;
-  difficulty: Difficulty;
-  tags: Tag[];
+  url: string;
+  tags?: string[];
+  difficulty: string;
+  solution?: ProblemSolution;
 }
 
 export enum Difficulty {
@@ -22,8 +27,8 @@ export enum Tag {
   DynamicProgramming = "DynamicProgramming"
 }
 
-export const Problem = (props: OwnProps) => {
-  const { href, solution, name } = props;
+export const ProblemBox = (props: Problem) => {
+  const { url, solution, name } = props;
 
   const [isOpen, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -43,11 +48,12 @@ export const Problem = (props: OwnProps) => {
         <Link
           target="_blank"
           rel="noreferrer"
-          href={href}>
+          href={url}>
           {name}
         </Link>
         <div style={{ marginTop: 20 }}>
           <Button variant="outlined" onClick={onShowSolutionClick}>Show Solution</Button>
+          {solution &&
           <Popper
             placement="bottom"
             open={isOpen}
@@ -58,7 +64,7 @@ export const Problem = (props: OwnProps) => {
               arrow: { enabled: true }
             }}>
             <Solution solution={solution}/>
-          </Popper>
+          </Popper>}
         </div>
       </div>
     </ClickAwayListener>
