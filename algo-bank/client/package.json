@@ -25,9 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "copy-build": "shx rm -rf ../api/build/client && shx cp -r ./build ../api/build/client",
     "test": "react-scripts test",
-    "copy": "npm run copy-build"
+    "copy-build": "shx rm -rf ../api/build/client && shx cp -r ./build ../api/build/client",
+    "build-copy": "npm run build && npm run copy-build"
   },
   "eslintConfig": {
     "extends": [
