@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./build/app.js",
+    "start": "nodemon",
     "dev": "nodemon",
     "copy-pug": "shx cp -r ./views ./build/views",
     "build": "tsc && npm run copy-pug",
