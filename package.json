@@ -6,7 +6,8 @@
     "start": "node ./build/bin/www",
     "dev": "nodemon",
     "copy-pug": "shx cp -r ./views ./build/views",
-    "build": "tsc && npm run copy-pug"
+    "build": "tsc && npm run copy-pug",
+    "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "dependencies": {
     "@types/body-parser": "^1.19.0",
