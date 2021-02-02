@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, indexPath)));
 app.use("/api/problems", usersRouter);
 
 app.get("/*", function (req, res) {
+  console.log("Paaaaaaaaaaaaaaaaaaaaaaaaath", __dirname);
   res.sendFile(path.join(__dirname, indexPath, "index.html"));
 });
 

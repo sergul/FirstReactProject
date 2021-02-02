@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./build/bin/www.js",
+    "start": "node dist/www.js",
     "dev": "nodemon",
-    "copy-pug": "shx cp -r ./views ./build/views",
-    "build": "tsc && npm run copy-pug",
-    "postbuild": "cd client && npm install && npm run build && cd .. && npm start"
+    "copy-pug": "shx cp -r ./views ./dist/views",
+    "build": "tsc && npm run copy-pug && cd client && npm install && npm run build"
   },
   "dependencies": {
     "@types/body-parser": "^1.19.0",
