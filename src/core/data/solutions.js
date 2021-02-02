@@ -48,6 +48,26 @@ export const solutions = {
     }
 
     return shuffled;
+  }.toString()),
+
+  numIdenticalPairs: deleteIndent(function (nums) {
+    const numberToCount = {};
+    let numGoodPairs = 0;
+    for (let i = 0; i < nums.length; ++i) {
+        numberToCount[nums[i]] = (numberToCount[nums[i]] || 0) + 1;
+    }
+    for (let key in numberToCount) {
+        numGoodPairs += numberToCount[key] * (numberToCount[key] - 1) / 2;
+    }
+    return numGoodPairs;
+  }.toString()),
+
+  defangIPaddr: deleteIndent(function (address) {
+    return address.replace(/\./ig, "[.]");
+  }.toString()),
+
+  thirdMax: deleteIndent(function (address) {
+    return address.replace(/\./ig, "[.]");
   }.toString())
 };
 

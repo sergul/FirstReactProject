@@ -8,7 +8,8 @@ enum Difficulty {
 
 enum Tag {
   Array = "Array",
-  DynamicProgramming = "DynamicProgramming"
+  DynamicProgramming = "DynamicProgramming",
+  String = "String"
 }
 
 export const getProblems = () => {
@@ -23,7 +24,7 @@ export const getProblems = () => {
           difficulty: Difficulty.Easy,
           solution: {
             name: "runningSum",
-            body: solutions.runningSum.toString(),
+            body: solutions.runningSum,
             explanation: `/*
           Input: nums = [1,2,3,4]
           runningSum(nums);
@@ -44,7 +45,7 @@ export const getProblems = () => {
           difficulty: Difficulty.Easy,
           solution: {
             name: "divisorGame",
-            body: solutions.divisorGame.toString(),
+            body: solutions.divisorGame,
             explanation: `/*
           Input: N = 2
           divisorGame(N);
@@ -64,7 +65,7 @@ export const getProblems = () => {
           difficulty: Difficulty.Easy,
           solution: {
             name: "kidsWithCandies",
-            body: solutions.kidsWithCandies.toString(),
+            body: solutions.kidsWithCandies,
             explanation: `/*
           Input: candies = [2,5,1,3], extraCandies = 3
           kidsWithCandies(candies, extraCandies);
@@ -84,7 +85,7 @@ export const getProblems = () => {
           difficulty: Difficulty.Easy,
           solution: {
             name: "maximumWealth",
-            body: solutions.maximumWealth.toString(),
+            body: solutions.maximumWealth,
             explanation: `/*
           Input: accounts = [[1,5],[7,3],[3,5]]
           maximumWealth(accounts);
@@ -104,12 +105,64 @@ export const getProblems = () => {
           difficulty: Difficulty.Easy,
           solution: {
             name: "shuffle",
-            body: solutions.shuffle.toString(),
+            body: solutions.shuffle,
             explanation: `/*
           Input: nums = [1,2,3,4,5,6], n = 3
           shuffle(nums, n);
           Output: [1,4,2,5,3,6]
           Explanation: Walk through nums array n times by pushing i-th and (n + i)-th elements followed by each other
+          */`
+          }
+        },
+        {
+          id: "5",
+          name: "Number of Good Pairs",
+          url: "https://leetcode.com/problems/number-of-good-pairs/",
+          tags: [Tag.Array],
+          difficulty: Difficulty.Easy,
+          solution: {
+            name: "numIdenticalPairs",
+            body: solutions.numIdenticalPairs,
+            explanation: `/*
+          Input: nums = [1,2,3,1,1,3]
+          numIdenticalPairs(nums);
+          Output: 4
+          Explanation: Iterate over nums and create a map between a number and its count e.g. 1 -> 3, 2 -> 1
+          Then start another loop on the mapped object and calculate the number of pairs for each number
+          */`
+          }
+        },
+        {
+          id: "6",
+          name: "Defanging an IP Address",
+          url: "https://leetcode.com/problems/defanging-an-ip-address/",
+          tags: [Tag.String],
+          difficulty: Difficulty.Easy,
+          solution: {
+            name: "defangIPaddr",
+            body: solutions.defangIPaddr,
+            explanation: `/*
+          Input: address = "1.1.1.1"
+          defangIPaddr(address);
+          Output: "1[.]1[.]1[.]1"
+          Explanation: Using regExp with g flag to replace all matches of "."
+          */`
+          }
+        },
+        {
+          id: "7",
+          name: "Third Maximum Number",
+          url: "https://leetcode.com/problems/third-maximum-number/",
+          tags: [Tag.Array],
+          difficulty: Difficulty.Easy,
+          solution: {
+            name: "thirdMax",
+            body: solutions.thirdMax,
+            explanation: `/*
+          Input: address = "1.1.1.1"
+          defangIPaddr(address);
+          Output: "1[.]1[.]1[.]1"
+          Explanation: Using regExp with g flag to replace all matches of "."
           */`
           }
         }

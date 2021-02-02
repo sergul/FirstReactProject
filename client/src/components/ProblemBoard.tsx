@@ -14,6 +14,7 @@ export const ProblemBoard = () => {
   // const problems = useMemo(() => getProblems(), []);
   const [problems, setProblems] = useState<ProblemList | undefined>();
 
+  // Requests problems data
   useEffect(() => {
     axios
       .get("/api/problems")
