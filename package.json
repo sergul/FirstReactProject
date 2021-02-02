@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node dist/www.js",
+    "start": "node dist/bin/www.js",
     "dev": "nodemon",
     "copy-pug": "shx cp -r ./views ./dist/views",
     "build": "tsc && npm run copy-pug && cd client && npm install && npm run build"

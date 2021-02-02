@@ -1,5 +1,5 @@
 {
   "watch": ["./"],
   "ext": "js,ts,json",
-  "exec": "ts-node www"
+  "exec": "ts-node bin/www"
 }
