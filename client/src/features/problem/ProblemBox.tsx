@@ -1,20 +1,8 @@
 import { Button, ClickAwayListener, Link, Popper } from "@material-ui/core";
 import React, { MouseEvent, useState } from "react";
 
-import { ProblemSolution, Solution } from "./Solution";
-
-export interface ProblemList {
-  leetcode: Problem[];
-}
-
-export interface Problem {
-  id: string;
-  name: string;
-  url: string;
-  tags?: string[];
-  difficulty: string;
-  solution?: ProblemSolution;
-}
+import { Problem } from "./Problem.model";
+import { Solution } from "./Solution";
 
 export enum Difficulty {
   Easy = "Easy",

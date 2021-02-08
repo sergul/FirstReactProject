@@ -1,8 +1,11 @@
 import { Grid } from "@material-ui/core";
-import axios, { AxiosError, AxiosResponse } from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
-import { ProblemBox, ProblemList } from "./ProblemBox";
+import { RootState } from "../../app/store";
+import { ProblemList } from "./Problem.model";
+import { ProblemBox } from "./ProblemBox";
+import { requestProblems } from "./problemSlice";
 
 export const ProblemBoard = () => {
   const md = 3;
@@ -11,20 +14,14 @@ export const ProblemBoard = () => {
   const lg = 2;
   const maxWidth = 400;
   const minWidth = 300;
-  // const problems = useMemo(() => getProblems(), []);
-  const [problems, setProblems] = useState<ProblemList | undefined>();
+  const problems = useSelector<RootState, ProblemList | undefined>((state) => state.problem.problems);
+  const dispatch = useDispatch();
+  
 
-  // Requests problems data
+  // Requests problems
   useEffect(() => {
-    axios
-      .get("/api/problems")
-      .then((response: AxiosResponse) => {
-        setProblems(JSON.parse(response.data));
-      })
-      .catch((error: AxiosError) => {
-        console.log(error.response?.statusText, error.response?.status);
-      });
-  }, []);
+    dispatch(requestProblems());
+  }, [dispatch]);
 
   return (
     <div style={{ padding: 16 }}>

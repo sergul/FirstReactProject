@@ -1,6 +1,6 @@
 import React from "react";
 
-import { ProblemBoard } from "./ProblemBoard";
+import { ProblemBoard } from "./problem/ProblemBoard";
 
 export const Home = () => {
   
