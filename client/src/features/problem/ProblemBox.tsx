@@ -1,8 +1,8 @@
 import { Button, ClickAwayListener, Link, Popper } from "@material-ui/core";
 import React, { MouseEvent, useState } from "react";
 
-import { Problem } from "./Problem.model";
 import { Solution } from "./Solution";
+import { Problem } from "./store/Problem.model";
 
 export enum Difficulty {
   Easy = "Easy",

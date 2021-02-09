@@ -2,10 +2,10 @@ import { Grid } from "@material-ui/core";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { RootState } from "../../app/store";
-import { ProblemList } from "./Problem.model";
+import { RootState } from "../../core/store";
+import { RequestState } from "../../core/utils/request";
 import { ProblemBox } from "./ProblemBox";
-import { requestProblems } from "./problemSlice";
+import { ProblemState, requestProblems } from "./store/problemSlice";
 
 export const ProblemBoard = () => {
   const md = 3;
@@ -14,9 +14,10 @@ export const ProblemBoard = () => {
   const lg = 2;
   const maxWidth = 400;
   const minWidth = 300;
-  const problems = useSelector<RootState, ProblemList | undefined>((state) => state.problem.problems);
+  const { problems, requestState } = useSelector<RootState, ProblemState>(
+    (state) => state.problem
+  );
   const dispatch = useDispatch();
-  
 
   // Requests problems
   useEffect(() => {
@@ -25,30 +26,34 @@ export const ProblemBoard = () => {
 
   return (
     <div style={{ padding: 16 }}>
-      <Grid container spacing={3}>
-        {problems?.leetcode.map(
-          ({ id, name, url, difficulty, tags, solution }) => {
-            return (
-              <Grid
-                key={id}
-                item
-                xs={xs}
-                sm={sm}
-                md={md}
-                lg={lg}
-                style={{ maxWidth, minWidth }}>
-                <ProblemBox
-                  id={id}
-                  url={url}
-                  name={name}
-                  difficulty={difficulty}
-                  tags={tags}
-                  solution={solution}/>
-              </Grid>
-            );
-          }
-        )}
-      </Grid>
+      {requestState === RequestState.Loading || requestState === RequestState.None && <div>Loading ...</div>}
+      {requestState === RequestState.Ready && (
+        <Grid container spacing={3}>
+          {problems?.leetcode.map(
+            ({ id, name, url, difficulty, tags, solution }) => {
+              return (
+                <Grid
+                  key={id}
+                  item
+                  xs={xs}
+                  sm={sm}
+                  md={md}
+                  lg={lg}
+                  style={{ maxWidth, minWidth }}>
+                  <ProblemBox
+                    id={id}
+                    url={url}
+                    name={name}
+                    difficulty={difficulty}
+                    tags={tags}
+                    solution={solution}/>
+                </Grid>
+              );
+            }
+          )}
+        </Grid>
+      )}
+      {requestState === RequestState.Failure && <div>Error while loading data</div>}
     </div>
   );
 };

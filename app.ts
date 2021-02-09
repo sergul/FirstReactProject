@@ -21,8 +21,12 @@ app.use(express.static(path.join(__dirname, indexPath)));
 
 app.use("/api/problems", usersRouter);
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, indexPath, "index.html"));
+app.get("/*", function (req, res, next) {
+  if (isProd) {
+    res.sendFile(path.join(__dirname, indexPath, "index.html"));
+  } else {
+    next(createError(404));
+  }
 });
 
 // catch 404 and forward to error handler
