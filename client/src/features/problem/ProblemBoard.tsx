@@ -53,7 +53,7 @@ export const ProblemBoard = () => {
           )}
         </Grid>
       )}
-      {requestState === RequestState.Failure && <div>Error while loading data</div>}
+      {requestState === RequestState.Failure && <div>Something went wrong while loading data</div>}
     </div>
   );
 };
