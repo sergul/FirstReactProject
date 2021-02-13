@@ -1,6 +1,7 @@
 import { Button, ClickAwayListener, Link, Popper } from "@material-ui/core";
 import React, { MouseEvent, useState } from "react";
 
+import styles from "./ProblemBox.module.css";
 import { Solution } from "./Solution";
 import { Problem } from "./store/Problem.model";
 
@@ -32,9 +33,10 @@ export const ProblemBox = (props: Problem) => {
 
   return (
     <ClickAwayListener onClickAway={onClickAway}>
-      <div className="roboto" style={{ background: "lightBlue", padding: 10 }}>
+      <div className={styles.box}>
         <Link
           target="_blank"
+          underline="none"
           rel="noreferrer"
           href={url}>
           {name}

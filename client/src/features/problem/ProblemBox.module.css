@@ -1,0 +1,19 @@
+.box {
+  background-image: linear-gradient(45deg, var(--mediumLight), var(--medium));
+  border: 2px solid var(--mediumDark);
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: box-shadow 0.15s ease-out;
+}
+
+.box:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.box:active {
+  box-shadow: rgba(50, 50, 93, 0.25) -4px 6px 6px -4px inset, rgba(143, 136, 136) 0px 6px 4px -4px inset;
+  transition: box-shadow 0.5s ease-out;
+}
