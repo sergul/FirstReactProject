@@ -13,7 +13,7 @@ export const ProblemBoard = () => {
   const xs = 12;
   const lg = 2;
   const maxWidth = 400;
-  const minWidth = 300;
+  const minWidth = 250;
   const { problems, requestState } = useSelector<RootState, ProblemState>(
     (state) => state.problem
   );
@@ -25,10 +25,10 @@ export const ProblemBoard = () => {
   }, [dispatch]);
 
   return (
-    <div style={{ padding: 16 }}>
+    <>
       {requestState === RequestState.Loading || requestState === RequestState.None && <div>Loading ...</div>}
       {requestState === RequestState.Ready && (
-        <Grid container spacing={3}>
+        <Grid container spacing={3} style={{ paddingTop: 24, paddingBottom: 24 }}>
           {problems?.leetcode.map(
             ({ id, name, url, difficulty, tags, solution }) => {
               return (
@@ -54,6 +54,6 @@ export const ProblemBoard = () => {
         </Grid>
       )}
       {requestState === RequestState.Failure && <div>Something went wrong while loading data</div>}
-    </div>
+    </>
   );
 };

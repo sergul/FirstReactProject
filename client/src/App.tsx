@@ -6,9 +6,7 @@ import { Home } from "./features/Home";
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <Home />
   );
 }
 

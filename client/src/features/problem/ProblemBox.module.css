@@ -19,3 +19,9 @@
   transition: box-shadow 0.2s cubic-bezier(0.61, 1, 0.88, 1), transform 0.2s;
   transform: scale(1.06);
 }
+
+/* .box:active {
+  box-shadow: rgba(50, 50, 93, 0.25) -4px 6px 6px -4px inset, rgba(143, 136, 136) 0px 6px 4px -4px inset;
+  transition: box-shadow 0.5s ease-out;
+  transform: scale(0.95)
+} */
