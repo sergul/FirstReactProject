@@ -1,4 +1,4 @@
-import createError from "http-errors"
+import createError from "http-errors";
 import express from "express";
 var path = require("path");
 var cookieParser = require("cookie-parser");
@@ -19,14 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, indexPath)));
 
-app.use("/api/problems", usersRouter);
+app.use("/api", usersRouter);
 
 app.get("/*", function (req, res, next) {
-  if (isProd) {
-    res.sendFile(path.join(__dirname, indexPath, "index.html"));
-  } else {
-    next(createError(404));
-  }
+  res.sendFile(path.join(__dirname, indexPath, "index.html"));
 });
 
 // catch 404 and forward to error handler

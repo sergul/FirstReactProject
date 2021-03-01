@@ -1,13 +1,12 @@
-export interface ProblemList {
-  leetcode: Problem[];
-}
+import { DifficultyLevel } from "./LeetCodeProblem.model";
 
 export interface Problem {
-  id: string;
-  name: string;
+  id: number;
+  displayId: string;
+  title: string;
   url: string;
   tags?: string[];
-  difficulty: string;
+  difficulty: DifficultyLevel;
   solution?: ProblemSolution;
 }
 

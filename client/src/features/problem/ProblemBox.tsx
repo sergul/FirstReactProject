@@ -5,19 +5,13 @@ import styles from "./ProblemBox.module.css";
 import { Solution } from "./Solution";
 import { Problem } from "./store/Problem.model";
 
-export enum Difficulty {
-  Easy = "Easy",
-  Medium = "Medium",
-  Hard = "Hard"
-}
-
 export enum Tag {
   Array = "Array",
   DynamicProgramming = "DynamicProgramming"
 }
 
 export const ProblemBox = (props: Problem) => {
-  const { url, solution, name } = props;
+  const { id, title, difficulty, url, solution } = props;
 
   const [isOpen, setOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -39,7 +33,7 @@ export const ProblemBox = (props: Problem) => {
           underline="none"
           rel="noreferrer"
           href={url}>
-          {name}
+          {`${id}. ${title}`}
         </Link>
         <div style={{ marginTop: 20 }}>
           <Button variant="outlined" onClick={onShowSolutionClick}>Show Solution</Button>
