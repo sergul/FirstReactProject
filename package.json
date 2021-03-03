@@ -21,7 +21,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-fetch": "^2.6.1",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "shx": "^0.3.3"
   },
   "devDependencies": {
